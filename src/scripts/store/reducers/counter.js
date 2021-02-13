@@ -6,6 +6,11 @@ export default function counterReducer(state = initialState, action) {
         ...state,
         count: state.count + action.howMuch
       }
+    case 'counter/decrement':
+      return {
+        ...state,
+        count: state.count - action.howMuch
+      }
     default:
       return state;
   }

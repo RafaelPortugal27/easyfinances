@@ -4,30 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:assets": "webpack --watch",
-    "dev:start": "live-server --open=./public/ --host=localhost --watch=./public/",
-    "dev": "npm-run-all -p dev:*",
-    "build": "cross-env NODE_ENV=production webpack"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
-  "author": "Graciano <hello@graciano.me>",
-  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelPortugal27/redux-no-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RafaelPortugal27/redux-no-react/issues"
+  },
+  "homepage": "https://github.com/RafaelPortugal27/redux-no-react#readme",
   "dependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
-    "@reduxjs/toolkit": "^1.5.0",
-    "babel-loader": "^8.2.2",
-    "cross-env": "^7.0.3",
-    "css-loader": "^5.0.1",
-    "cssnano": "^4.1.10",
-    "file-loader": "^6.2.0",
-    "live-server": "^1.2.1",
-    "mini-css-extract-plugin": "^1.3.4",
-    "node-sass": "^5.0.0",
-    "npm-run-all": "^4.1.5",
-    "postcss-loader": "^4.2.0",
-    "postcss-preset-env": "^6.7.0",
-    "sass-loader": "^10.1.1",
-    "webpack": "^5.17.0",
-    "webpack-cli": "^4.4.0"
+    "next": "^10.0.9",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }

@@ -21,5 +21,10 @@ module.exports = {
   ],
   rules: {
     'react/require-default-props': 0,
+    'react/jsx-props-no-spreading': ['error', {
+      html: 'enforce',
+      custom: 'ignore',
+      exceptions: [''],
+    }],
   },
 };

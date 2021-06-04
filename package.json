@@ -1,25 +1,25 @@
 {
-  "name": "redux-no-react",
+  "name": "easyfinances",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $PORT"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RafaelPortugal27/redux-no-react.git"
+    "url": "git+https://github.com/RafaelPortugal27/easyfinances.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RafaelPortugal27/redux-no-react/issues"
+    "url": "https://github.com/RafaelPortugal27/easyfinances/issues"
   },
-  "homepage": "https://github.com/RafaelPortugal27/redux-no-react#readme",
+  "homepage": "https://github.com/RafaelPortugal27/easyfinances#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
     "next": "^10.0.9",
@@ -36,5 +36,6 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0"
-  }
+  },
+  "cacheDirectories": [".next/cache"]
 }

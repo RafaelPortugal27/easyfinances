@@ -2,16 +2,19 @@ import React from 'react';
 import { GoogleLogin } from 'react-google-login';
 
 export default function GoogleLoginButton() {
-  const responseGoogle = (response) => {
-    console.log(response);
+  const responseGoogleSuccess = (response) => {
+    console.log('Success: ', response);
+  };
+  const responseGoogleFailure = (response) => {
+    console.log('Failure: ', response);
   };
 
   return (
     <GoogleLogin
-      clientId="426167753970-lcgqunhceq7k8s85fhvmeepsdber21ia.apps.googleusercontent.com"
+      clientId={process.env.GOOGLE_CLIENT_ID}
       buttonText="Login"
-      onSuccess={responseGoogle}
-      onFailure={responseGoogle}
+      onSuccess={responseGoogleSuccess}
+      onFailure={responseGoogleFailure}
       cookiePolicy="single_host_origin"
     />
   );

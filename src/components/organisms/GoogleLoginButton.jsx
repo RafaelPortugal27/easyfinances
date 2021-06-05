@@ -1,5 +1,8 @@
 import React from 'react';
+import getConfig from 'next/config';
 import { GoogleLogin } from 'react-google-login';
+
+const { publicRuntimeConfig: { GOOGLE_CLIENT_ID } } = getConfig();
 
 export default function GoogleLoginButton() {
   const responseGoogleSuccess = (response) => {
@@ -11,7 +14,7 @@ export default function GoogleLoginButton() {
 
   return (
     <GoogleLogin
-      clientId={process.env.GOOGLE_CLIENT_ID}
+      clientId={GOOGLE_CLIENT_ID}
       buttonText="Login"
       onSuccess={responseGoogleSuccess}
       onFailure={responseGoogleFailure}

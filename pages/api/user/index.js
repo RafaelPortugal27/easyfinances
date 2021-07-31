@@ -1,20 +1,19 @@
-export default function userHandler(req, res) {
+import { createUser } from '../../../src/services/users';
+
+export default async function userHandler(req, res) {
   const {
-    query: { id, name },
+    query,
     method,
   } = req;
 
   switch (method) {
-    case 'GET':
-      // Get data from your database
-      res.status(200).json({ id, name: `User ${id}` });
+    case 'POST': {
+      const id = await createUser(query);
+      res.status(200).json({ id, name: query.name || `User ${id}` });
       break;
-    case 'PUT':
-      // Update or create data in your database
-      res.status(200).json({ id, name: name || `User ${id}` });
-      break;
+    }
     default:
-      res.setHeader('Allow', ['GET', 'PUT']);
+      res.setHeader('Allow', ['GET', 'POST']);
       res.status(405).end(`Method ${method} Not Allowed`);
   }
 }

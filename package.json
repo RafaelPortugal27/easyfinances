@@ -23,10 +23,12 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "next": "^10.0.9",
+    "pg": "^8.7.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-google-login": "^5.2.2",
+    "sequelize": "^6.6.5",
     "styled-components": "^5.2.3"
   },
   "devDependencies": {
@@ -37,7 +39,9 @@
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0"
   },
-  "cacheDirectories": [".next/cache"],
+  "cacheDirectories": [
+    ".next/cache"
+  ],
   "engines": {
     "node": "14.15.x",
     "npm": "7.8.x",

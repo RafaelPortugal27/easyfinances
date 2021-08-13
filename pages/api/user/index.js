@@ -1,15 +1,21 @@
-import { createUser } from '../../../src/services/users';
+import { createUser, findUser } from '../../../src/db/services/users';
 
 export default async function userHandler(req, res) {
   const {
-    query,
+    body,
     method,
+    query,
   } = req;
 
   switch (method) {
     case 'POST': {
-      const id = await createUser(query);
-      res.status(200).json({ id, name: query.name || `User ${id}` });
+      const resp = await createUser(body);
+      res.status(201).json(resp);
+      break;
+    }
+    case 'GET': {
+      const resp = await findUser(query?.email);
+      res.status(200).json(resp);
       break;
     }
     default:

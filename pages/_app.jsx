@@ -1,4 +1,5 @@
 import React from 'react';
+import { Provider } from 'next-auth/client';
 import PropTypes from 'prop-types';
 import '../src/styles/global.css';
 
@@ -7,7 +8,9 @@ import '../src/styles/global.css';
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Component {...pageProps} />
+      <Provider session={pageProps.session}>
+        <Component {...pageProps} />
+      </Provider>
     </>
   );
 }
